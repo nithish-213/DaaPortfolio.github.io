@@ -278,16 +278,3 @@ footer a {
   text-decoration: none;
   color: var(--primary);
 }
-
-/* Modify GitHub and LinkedIn links to remove button-like styling */
-.contact__github button > a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: normal; /* Regular text */
-  background: none; /* No background */
-  border: none; /* No border */
-}
-
-.contact__github button > a:hover {
-  color: var(--primary); /* Change text color on hover */
-}
