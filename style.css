@@ -99,7 +99,7 @@ section.hero-section {
 }
 
 .hero-section__title {
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 48px);
 }
 
 .hero-section__title span {
@@ -156,7 +156,7 @@ section.about-section {
   margin-top: 30px;
   margin-bottom: 15px;
   text-align: center;
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 28px);
   color: var(--primary);
 }
 
@@ -224,7 +224,7 @@ section.project-section {
   margin-top: 30px;
   margin-bottom: 15px;
   text-align: center;
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 28px);
   color: var(--primary);
 }
 
@@ -311,7 +311,7 @@ section.contact-section {
 .contact-section h2 {
   margin-top: 30px;
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: clamp(20px, 4vw, 28px);
   font-weight: bold;
   color: var(--primary);
   text-align: center;
