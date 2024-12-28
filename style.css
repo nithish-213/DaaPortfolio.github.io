@@ -31,16 +31,17 @@ header {
   left: 0;
   right: 0;
   background-color: var(--dark-primary);
-  padding: 20px 40px;
+  padding: 25px;
   color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   z-index: 1;
 }
 
 header .logo {
   color: var(--primary);
+  margin-right: 130px;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -51,7 +52,7 @@ header ul {
 }
 
 header ul li {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 header ul li a {
@@ -87,7 +88,7 @@ section.hero-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 40px;
+  padding: 100px 120px 50px 200px;
   flex-wrap: wrap;
 }
 
@@ -99,7 +100,6 @@ section.hero-section {
 
 .hero-section__title {
   font-size: 48px;
-  margin-bottom: 20px;
 }
 
 .hero-section__title span {
@@ -108,7 +108,6 @@ section.hero-section {
 
 .hero-section__desc {
   color: #c4c4c4;
-  margin-bottom: 20px;
 }
 
 .hero-img img {
@@ -139,7 +138,7 @@ section.hero-section {
 
 /* About Section */
 section.about-section {
-  padding: 50px 20px;
+  padding: 40px 20px;
   background-color: var(--dark-primary);
   color: #fff;
 }
@@ -154,15 +153,32 @@ section.about-section {
 }
 
 .about-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
   color: var(--primary);
 }
 
+.about-section dl {
+  margin-bottom: 40px;
+}
+
+.about-section dt {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #c4c4c4;
+}
+
+.about-section dd {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
 .about-section ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .about-section ul li {
@@ -179,33 +195,39 @@ section.about-section {
   color: var(--primary);
 }
 
+.about-section ul li i {
+  margin-right: 10px;
+}
+
 @media (max-width: 768px) {
   .about-content {
     padding: 15px;
   }
 }
 
-/* Projects Section */
-section.projects-section {
+/* Project Section */
+section.project-section {
   padding: 50px 20px;
   background-color: var(--dark-primary);
+  color: #fff;
 }
 
-.projects-section h2 {
+.project-section h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
   text-align: center;
-  margin-bottom: 20px;
   font-size: 28px;
   color: var(--primary);
 }
 
-.projects-cards {
+.project-cards {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.projects-card-box {
+.project-card-box {
   flex: 1 1 calc(50% - 20px);
   background-color: #22282f;
   padding: 20px;
@@ -215,29 +237,48 @@ section.projects-section {
   text-align: center;
 }
 
-.projects-card-box:hover {
+.project-card-box:hover {
   transform: translateY(-5px);
+  transition: all 0.5s ease 0s;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.projects-card-box__icons > i {
+.project-card-box__icons > i {
   font-size: 30px;
   color: var(--primary);
-  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  padding: 20px;
 }
 
-.projects-card-box__desc h4 {
+.project-card-box:hover .projects-card-box__icons > i {
+  color: var(--primary);
+  background-color: var(--dark-primary);
+  transition: all 0.5s ease 0s;
+}
+
+.project-card-box__desc h4 {
   font-size: 18px;
-  margin: 15px 0;
+  margin: 18px 0 10px 0;
 }
 
-.projects-card-box__desc p {
+.project-card-box__desc p {
   color: #c4c4c4;
   font-size: 14px;
 }
 
+.project-card-box__buttons button {
+  background-color: #22282f;
+}
+
+.project-card-box__buttons button > a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+}
+
 @media (max-width: 768px) {
-  .projects-card-box {
+  .project-card-box {
     width: 100%;
   }
 }
@@ -247,8 +288,8 @@ footer {
   background-color: var(--dark-primary);
   color: gray;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
+  padding: 15px 0;
+  font-size: 13px;
 }
 
 footer a {
