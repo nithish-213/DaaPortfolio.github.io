@@ -283,21 +283,54 @@ section.project-section {
   }
 }
 
-/* Contact */
+/* Contact Section */
 section.contact-section {
-  background-color: #22282f;
+  padding: 40px 20px;
+  background-color: var(--dark-primary);
   color: #fff;
-  text-align: center;
-  padding: 30px;
 }
 
 .contact-section h2 {
-  font-size: 28px;
-  margin: 18px 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary);
+  text-align: center;
 }
 
-.contact-section h2 > span {
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #22282f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.contact-content ul li {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contact-content ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.contact-content ul li a:hover {
   color: var(--primary);
+}
+
+.contact-content ul li i {
+  margin-right: 10px;
 }
 
 /* Footer */
