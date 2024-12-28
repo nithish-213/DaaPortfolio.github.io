@@ -269,21 +269,22 @@ section.project-section {
 
 .project-card-box__buttons a {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 16px;
   background-color: var(--primary); /* Button background color */
   color: var(--light-primary); /* Button text color */
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   border-radius: 4px; /* Rounded corners */
   transition: all 0.3s ease; /* Smooth transition effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
 }
 
 .project-card-box__buttons a:hover {
   background-color: var(--primary-hover); /* Darker shade on hover */
   color: var(--light-primary); /* Ensure text remains readable */
   transform: translateY(-2px); /* Slight lift effect on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 @media (max-width: 768px) {
