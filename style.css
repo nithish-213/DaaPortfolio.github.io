@@ -283,6 +283,23 @@ section.project-section {
   }
 }
 
+/* Contact */
+section.contact-section {
+  background-color: #22282f;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin: 18px 0;
+}
+
+.contact-section h2 > span {
+  color: var(--primary);
+}
+
 /* Footer */
 footer {
   background-color: var(--dark-primary);
