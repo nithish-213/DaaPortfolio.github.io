@@ -265,68 +265,6 @@ section.projects-section {
   color: #fff;
 }
 
-/* Contact Section */
-section.contact-section {
-  background-color: #22282f;
-  color: #fff;
-  text-align: center;
-  padding: 30px;
-}
-
-.contact-section h2 {
-  font-size: 28px;
-  margin: 18px 0;
-}
-
-.contact-section h2 > span {
-  color: var(--primary);
-}
-
-.contact-section form div > input,
-textarea {
-  background-color: #c4c4c4;
-  width: 300px;
-  padding: 5px 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  resize: none;
-  font-family: "Poppins", sans-serif;
-}
-
-.contact-section form div > input:focus,
-textarea:focus {
-  border: 1px solid var(--primary);
-}
-
-.contact-section form div > button {
-  font-size: 14px;
-}
-
-.contact__github {
-  margin-top: 15px;
-}
-
-.contact__github button {
-  padding: 10px 44px;
-  background-color: #171515;
-  font-size: 14px;
-}
-
-.contact__github button > a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.contact__github button > a > i {
-  font-size: 16px;
-}
-
-.contact__github button:hover {
-  background-color: #030303;
-}
-
 /* Footer */
 footer {
   background-color: var(--dark-primary);
@@ -339,4 +277,17 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--primary);
+}
+
+/* Modify GitHub and LinkedIn links to remove button-like styling */
+.contact__github button > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal; /* Regular text */
+  background: none; /* No background */
+  border: none; /* No border */
+}
+
+.contact__github button > a:hover {
+  color: var(--primary); /* Change text color on hover */
 }
