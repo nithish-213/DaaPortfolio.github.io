@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of J Nithish, a passionate web developer and problem solver.">
+    <meta name="keywords" content="J Nithish, portfolio, web developer, DAA project, KLE Technological University">
+    <meta name="author" content="J Nithish">
     <title>Nithish - Portfolio</title>
 
     <!-- Font Awesome icons -->
@@ -12,6 +15,9 @@
 
     <!-- Styling CSS -->
     <link rel="stylesheet" id="themeStylesheet" href="./style.css">
+
+    <!-- External Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -53,7 +59,6 @@
 
         <!-- About Section  -->
         <section class="about-section" id="about">
-
             <div class="about-content">
                 <h2>About Me</h2>
                 <dl>
@@ -80,19 +85,18 @@
                 </dl>
 
                 <h2>🚀 Skills</h2>
-        <ul>
-            <li>C++, Python, JavaScript</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Web Development (React.js, Node.js)</li>
-        </ul>
+                <ul>
+                    <li><i class="fas fa-code"></i> C++, Python, JavaScript</li>
+                    <li><i class="fas fa-database"></i> Data Structures and Algorithms</li>
+                    <li><i class="fas fa-laptop-code"></i> Web Development (React.js, Node.js)</li>
+                </ul>
 
                 <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/nithish-213" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nithish-j-634b112a9" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        </ul>
+                <ul>
+                    <li><a href="https://github.com/nithish-213" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/nithish-j-634b112a9" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
             </div>
-
         </section>
 
         <!-- Projects Section -->
@@ -108,11 +112,18 @@
 
     </main>
 
-        <script>
-            document.querySelector('footer p').innerHTML = `Copyright &copy; ${new Date().getFullYear()} - <a href="https://github.com/nithish-213" target="_blank">Nithish</a> - All Rights Reserved.`;
-        </script>
+        <footer>
+        <p>
+            Copyright &copy; <span id="year"></span> - 
+            <a href="https://github.com/nithish-213" target="_blank">Nithish</a> - All Rights Reserved.
+        </p>
+    </footer>
 
     <!-- JS -->
+    <script>
+        // Dynamic Year for Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
     <script src="./script.js"></script>
 
 </body>
