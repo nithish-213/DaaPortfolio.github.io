@@ -202,32 +202,33 @@ section.about-section {
 
 .projects-section h2 {
   margin-top: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: 28px;
   text-align: center;
   color: var(--primary);
 }
 
 .projects-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-around; /* Add spacing between cards */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Add spacing between rows */
 }
 
 .projects-card-box {
-  width: 100%;
-  max-width: 300px;
-  margin: 15px;
-  padding: 20px;
+  flex: 1 1 calc(33.33% - 20px); /* Responsive: 3 cards per row, adjust gap */
+  max-width: 300px; /* Limit maximum width */
   background-color: #22282f;
   border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .projects-card-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .projects-card-box__icons i {
@@ -249,7 +250,8 @@ section.about-section {
 
 .projects-card-box__buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px; /* Add spacing between buttons */
 }
 
 .projects-card-box__buttons .btn {
