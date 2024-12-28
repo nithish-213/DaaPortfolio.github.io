@@ -160,6 +160,14 @@ section.about-section {
   color: var(--primary);
 }
 
+.about-section h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  
+  font-size: 22px; /* Smaller size for Skills heading */
+  color: var(--primary);
+}
+
 .about-section dl {
   margin-bottom: 40px;
 }
