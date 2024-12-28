@@ -201,12 +201,11 @@ section.projects-section {
 }
 
 .projects-section h2 {
-  font-size: 28px;
+  margin-top: 30px; /* Consistent spacing */
+  margin-bottom: 15px; /* Consistent spacing */
+  font-size: 28px; /* Same size as Skills heading */
   text-align: center;
-}
-
-.projects-section h2 > span {
-  color: var(--primary);
+  color: var(--primary); /* Match color of Skills heading */
 }
 
 .projects-cards {
