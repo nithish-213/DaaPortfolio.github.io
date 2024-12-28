@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 
-/* Global variables */
+/* Global Variables */
 :root {
-  --primary: #12bdff; /* Primary color */
-  --primary-hover: #0c8ec2; /* Hover color */
-  --dark-primary: #1b1f24; /* Dark background color */
+  --primary: #f39c12; /* Accent color */
+  --primary-hover: #e67e22; /* Hover color */
+  --dark-primary: #1b1f24; /* Dark background */
+  --light-bg: #f4f4f4; /* Light background */
+  --text-light: #c4c4c4; /* Muted text */
 }
 
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +22,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f4f4f4; /* Light background for the body */
-  color: #333; /* Default text color */
+  background-color: var(--light-bg);
+  color: #333;
 }
 
 /* Header */
@@ -30,53 +33,46 @@ header {
   left: 0;
   right: 0;
   background-color: var(--dark-primary);
-  padding: 25px;
-  color: #fff;
+  padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 10;
 }
 
 header .logo {
+  font-weight: bold;
   color: var(--primary);
-  margin-right: 130px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 1.5rem;
 }
 
 header ul {
-  display: flex;
   list-style: none;
-}
-
-header ul li {
-  margin-right: 30px;
+  display: flex;
+  gap: 1rem;
 }
 
 header ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease 0s;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 header ul li a:hover {
   color: var(--primary);
-  transition: all 0.3s ease 0s;
 }
 
 /* Hero Section */
-section.hero-section {
+.hero-section {
   background-color: var(--dark-primary);
   color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 100px 120px 50px 200px;
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
 .hero-section__title {
-  font-size: 48px;
+  font-size: 3rem;
 }
 
 .hero-section__title span {
@@ -84,278 +80,120 @@ section.hero-section {
 }
 
 .hero-section__desc {
-  color: #c4c4c4;
-}
-
-.hero-img img {
-  margin-left: 30px;
-  border-radius: 15px;
-}
-
-.social-icons {
-  margin: 18px 0;
-}
-
-ul.social-icons {
-  list-style: none;
-  display: flex;
-}
-
-.social-icons li {
-  margin-right: 15px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 8px 12px;
-}
-
-.social-icons li:hover {
-  background-color: var(--primary);
-  transition: all 0.3s ease 0s;
-}
-
-.social-icons li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
-.hero-buttons button {
-  margin-right: 10px;
-}
-
-.hero-buttons button > a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* buttons */
-.btn {
-  padding: 10px 20px;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.btn.btn-primary {
-  background-color: var(--primary);
-  color: var(--dark-primary);
-  font-weight: 600;
-}
-
-.btn.btn-primary:hover {
-  background-color: var(--primary-hover);
-  transition: all 0.3s ease 0s;
+  color: var(--text-light);
+  margin-top: 1rem;
 }
 
 /* About Section */
-section.about-section {
-  padding: 40px 20px;
-  background-color: #fff; /* Light background for About section */
+.about-section {
+  background-color: var(--dark-primary);
+  color: #fff;
+  padding: 3rem 2rem;
 }
 
 .about-content {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
+  padding: 2rem;
+  background-color: #22282f;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-section h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.about-section dl dt {
   font-weight: bold;
+  color: var(--primary);
 }
 
-.about-section dl {
-  margin-bottom: 40px;
-}
-
-.about-section dt {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.about-section dd {
-  margin-bottom: 20px;
-  padding-left: 10px;
-}
-
-.about-section ul {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.about-section ul li {
-  margin-bottom: 15px;
-}
-
-.about-section ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.about-section ul li a:hover {
-  color: #007BFF;
+.about-section dl dd {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 .about-section ul li i {
-  margin-right: 10px;
+  margin-right: 0.5rem;
+  color: var(--primary);
 }
 
 /* Projects Section */
-section.projects-section {
+.projects-section {
   background-color: var(--dark-primary);
   color: #fff;
-  padding: 50px 120px;
+  padding: 3rem 2rem;
 }
 
 .projects-section h2 {
-  font-size: 28px;
+  color: var(--primary);
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.projects-section h2 > span {
-  color: var(--primary);
+.project-card {
+  background-color: #333333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
-.projects-cards {
-  display: flex;
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: #444444;
 }
 
-.projects-card-box {
-  width: 33.33%;
-  margin: 35px 10px;
-  padding: 33px;
-  background-color: #22282f;
-  border-radius: 5px;
-  transition: all 0.5s ease 0s;
-}
-
-.projects-card-box:hover {
-  box-shadow: 3px 5px 20px #03506e;
-  transition: all 0.5s ease 0s;
-  transform: translateY(-2px);
-}
-
-.projects-card-box__icons > i {
-  font-size: 30px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 20px;
-}
-
-.projects-card-box:hover .projects-card-box__icons > i {
-  color: var(--primary);
-  background-color: var(--dark-primary);
-  transition: all 0.5s ease 0s;
-}
-
-.projects-card-box__desc h4 {
-  font-size: 18px;
-  margin: 18px 0 10px 0;
-}
-
-.projects-card-box__desc p {
-  font-size: 14px;
-  color: #c4c4c4;
-}
-
-.projects-card-box__buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects-card-box__buttons button {
-  background-color: #22282f;
-}
-
-.projects-card-box__buttons button > a {
-  text-decoration: none;
-  font-size: 13px;
-  color: #fff;
-}
-
-/* Contact Section */
-section.contact-section {
-  background-color: #22282f;
-  color: #fff;
-  text-align: center;
-  padding: 30px;
-}
-
-.contact-section h2 {
-  font-size: 28px;
-  margin: 18px 0;
-}
-
-.contact-section h2 > span {
-  color: var(--primary);
-}
-
-.contact-section form div > input,
-textarea {
-  background-color: #c4c4c4;
-  width: 300px;
-  padding: 5px 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+/* Buttons */
+.btn {
+  padding: 0.8rem 1.5rem;
   border: none;
-  outline: none;
-  resize: none;
-  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.contact-section form div > input:focus,
-textarea:focus {
-  border: 1px solid var(--primary);
-}
-
-.contact-section form div > button {
-  font-size: 14px;
-}
-
-.contact__github {
-  margin-top: 15px;
-}
-
-.contact__github button {
-  padding: 10px 44px;
-  background-color: #171515;
-  font-size: 14px;
-}
-
-.contact__github button > a {
-  text-decoration: none;
+.btn-primary {
+  background-color: var(--primary);
   color: #fff;
 }
 
-.contact__github button > a > i {
-  font-size: 16px;
-}
-
-.contact__github button:hover {
-  background-color: #030303;
+.btn-primary:hover {
+  background-color: var(--primary-hover);
 }
 
 /* Footer */
 footer {
   background-color: var(--dark-primary);
-  color: gray;
+  color: var(--text-light);
   text-align: center;
-  padding: 15px 0;
-  font-size: 13px;
+  padding: 1rem;
 }
 
 footer a {
-  text-decoration: none;
   color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--primary-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .about-section, .projects-section {
+    padding: 2rem 1rem;
+  }
 }
