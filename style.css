@@ -93,34 +93,6 @@ section.hero-section {
   border-radius: 15px;
 }
 
-.social-icons {
-  margin: 18px 0;
-}
-
-ul.social-icons {
-  list-style: none;
-  display: flex;
-}
-
-.social-icons li {
-  margin-right: 15px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 8px 12px;
-}
-
-.social-icons li:hover {
-  background-color: var(--primary);
-  transition: all 0.3s ease 0s;
-}
-
-.social-icons li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: all 0.3s ease 0s;
-}
-
 .hero-buttons button {
   margin-right: 10px;
 }
