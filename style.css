@@ -1,16 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 
-/* Global variables */
 :root {
-  --primary: #12bdff; /* Main color */
-  --primary-hover: #0c8ec2; /* Hover effect color */
-  --dark-primary: #1b1f24; /* Dark background color */
-  --light-bg: #22282f; /* Light background for sections */
-  --text-light: #fff; /* Light text color */
-  --text-dark: #c4c4c4; /* Light gray text color */
+  --primary: #12bdff;
+  --primary-hover: #0c8ec2;
+  --dark-primary: #1b1f24;
 }
 
-/* Global Reset */
+/* Global variables */
 * {
   margin: 0;
   padding: 0;
@@ -23,8 +19,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--dark-primary);
-  color: var(--text-light);
+  background-color: #22282f; /* Set a dark background */
+  color: #fff;
 }
 
 /* Header */
@@ -34,17 +30,18 @@ header {
   left: 0;
   right: 0;
   background-color: var(--dark-primary);
-  padding: 20px 40px;
+  padding: 25px;
+  color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   z-index: 1;
 }
 
 header .logo {
   color: var(--primary);
+  margin-right: 130px;
   font-weight: 600;
-  font-size: 22px;
   letter-spacing: 2px;
 }
 
@@ -58,7 +55,7 @@ header ul li {
 }
 
 header ul li a {
-  color: var(--text-light);
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease 0s;
@@ -69,30 +66,13 @@ header ul li a:hover {
   transition: all 0.3s ease 0s;
 }
 
-header button {
-  background-color: transparent;
-  color: var(--text-light);
-  font-size: 16px;
-  cursor: pointer;
-  border: 1px solid var(--primary);
-  padding: 10px 15px;
-  font-weight: 600;
-  border-radius: 5px;
-}
-
-header button:hover {
-  background-color: var(--primary);
-  color: #fff;
-}
-
 /* Hero Section */
 section.hero-section {
-  background-color: var(--light-bg);
-  color: var(--text-light);
+  background-color: var(--dark-primary);
+  color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 100px 120px 50px 40px;
+  padding: 100px 120px 50px 200px;
 }
 
 .hero-section__title {
@@ -104,23 +84,22 @@ section.hero-section {
 }
 
 .hero-section__desc {
-  color: var(--text-dark);
-  font-size: 18px;
-}
-
-.hero-section h4 {
-  font-size: 20px;
-}
-
-.hero-section div {
-  max-width: 600px;
+  color: #c4c4c4;
 }
 
 /* About Section */
 section.about-section {
-  background-color: var(--light-bg);
-  color: var(--text-light);
-  padding: 60px 120px;
+  background-color: #22282f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.about-content {
+  margin-left: 100px;
+  max-width: 600px;
 }
 
 .about-content h2 {
@@ -131,70 +110,31 @@ section.about-section {
   color: var(--primary);
 }
 
-.about-content dl {
-  margin-top: 20px;
-}
-
-.about-content dt {
-  font-weight: 600;
-}
-
-.about-content dd {
-  margin-bottom: 10px;
-}
-
-.about-content ul {
-  margin-top: 20px;
-}
-
-.about-content ul li {
-  font-size: 16px;
-  margin-bottom: 10px;
+.about-content p {
+  color: #c4c4c4;
+  font-size: 15px;
 }
 
 /* Projects Section */
 section.projects-section {
   background-color: var(--dark-primary);
-  color: var(--text-light);
+  color: #fff;
   padding: 50px 120px;
-  text-align: center;
 }
 
 .projects-section h2 {
   font-size: 28px;
+  text-align: center;
 }
 
 .projects-section h2 > span {
   color: var(--primary);
 }
 
-.project-card {
-  background-color: var(--light-bg);
-  padding: 30px;
-  margin: 20px;
-  border-radius: 8px;
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  color: var(--text-dark);
-  font-size: 16px;
-}
-
 /* Footer */
 footer {
   background-color: var(--dark-primary);
-  color: var(--text-dark);
+  color: gray;
   text-align: center;
   padding: 15px 0;
   font-size: 13px;
@@ -203,52 +143,4 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--primary);
-}
-
-/* Media queries */
-@media only screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header .logo {
-    margin: auto;
-  }
-
-  header ul {
-    margin-top: 10px;
-  }
-
-  /* Hero Section */
-  section.hero-section {
-    flex-direction: column;
-    padding: 40px;
-    padding-top: 130px;
-  }
-
-  /* About Section */
-  section.about-section {
-    flex-direction: column;
-    padding: 40px;
-  }
-
-  .about-content {
-    margin-left: 0;
-    margin-top: 30px;
-  }
-
-  /* Projects Section */
-  section.projects-section {
-    padding: 40px;
-  }
-
-  .projects-cards {
-    margin-top: 15px;
-    flex-direction: column;
-  }
-
-  .projects-card-box {
-    width: 100%;
-    margin: 10px 0;
-  }
 }
