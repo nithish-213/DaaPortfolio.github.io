@@ -1,5 +1,3 @@
-// JavaScript for Dark Mode Toggle
-
 document.addEventListener("DOMContentLoaded", function () {
   // Set the initial year in the footer
   document.getElementById("year").textContent = new Date().getFullYear();
@@ -10,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Check if dark mode was previously enabled (localStorage)
   if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
+    document.querySelector("header").classList.add("dark-mode");
     darkModeToggle.textContent = "🌞 Light Mode"; // Update button text
   }
 
@@ -17,20 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
   darkModeToggle.addEventListener("click", function () {
     if (document.body.classList.contains("dark-mode")) {
       document.body.classList.remove("dark-mode");
+      document.querySelector("header").classList.remove("dark-mode");
       darkModeToggle.textContent = "🌙 Dark Mode"; // Update button text
       localStorage.setItem("darkMode", "disabled");
     } else {
       document.body.classList.add("dark-mode");
+      document.querySelector("header").classList.add("dark-mode");
       darkModeToggle.textContent = "🌞 Light Mode"; // Update button text
       localStorage.setItem("darkMode", "enabled");
     }
   });
 
   // Smooth Scroll for Navigation Links
-  document.querySelectorAll("header ul li a").forEach((link) => {
-    link.addEventListener("click", function (e) {
+  document.querySelector("header ul").addEventListener("click", function (e) {
+    if (e.target.tagName === 'A') {
       e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
+      const targetId = e.target.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: "smooth",
         });
       }
-    });
+    }
   });
 
   // Expandable Project Cards (Optional for future projects)
