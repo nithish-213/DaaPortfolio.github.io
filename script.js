@@ -32,15 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Alert for external links
-    const externalLinks = document.querySelectorAll('a[target="_blank"]');
-    externalLinks.forEach((link) => {
-        link.addEventListener("click", function (e) {
-            if (!confirm("You are about to visit an external site. Continue?")) {
-                e.preventDefault();
-            }
-        });
-    });
 
     // Project buttons functionality (if buttons are inside project cards)
     const projectButtons = document.querySelectorAll('.projects-card-box__buttons button');
