@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 
+/* Global variables */
 :root {
-  --primary: #12bdff;
-  --primary-hover: #0c8ec2;
-  --dark-primary: #1b1f24;
+  --primary: #12bdff; /* Primary color */
+  --primary-hover: #0c8ec2; /* Hover color */
+  --dark-primary: #1b1f24; /* Dark background color */
 }
 
-/* Global variables */
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +19,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #22282f; /* Set a dark background */
-  color: #fff;
+  background-color: #f4f4f4; /* Light background for the body */
+  color: #333; /* Default text color */
 }
 
 /* Header */
@@ -87,32 +87,126 @@ section.hero-section {
   color: #c4c4c4;
 }
 
+.hero-img img {
+  margin-left: 30px;
+  border-radius: 15px;
+}
+
+.social-icons {
+  margin: 18px 0;
+}
+
+ul.social-icons {
+  list-style: none;
+  display: flex;
+}
+
+.social-icons li {
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  padding: 8px 12px;
+}
+
+.social-icons li:hover {
+  background-color: var(--primary);
+  transition: all 0.3s ease 0s;
+}
+
+.social-icons li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease 0s;
+}
+
+.hero-buttons button {
+  margin-right: 10px;
+}
+
+.hero-buttons button > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary);
+  color: var(--dark-primary);
+  font-weight: 600;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
+}
+
 /* About Section */
 section.about-section {
-  background-color: #22282f;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
+  padding: 40px 20px;
+  background-color: #fff; /* Light background for About section */
 }
 
 .about-content {
-  margin-left: 100px;
-  max-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-content h2 {
-  font-size: 33px;
+.about-section h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.about-content h2 > span {
-  color: var(--primary);
+.about-section dl {
+  margin-bottom: 40px;
 }
 
-.about-content p {
-  color: #c4c4c4;
-  font-size: 15px;
+.about-section dt {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.about-section dd {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.about-section ul li {
+  margin-bottom: 15px;
+}
+
+.about-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.about-section ul li a:hover {
+  color: #007BFF;
+}
+
+.about-section ul li i {
+  margin-right: 10px;
 }
 
 /* Projects Section */
@@ -129,6 +223,127 @@ section.projects-section {
 
 .projects-section h2 > span {
   color: var(--primary);
+}
+
+.projects-cards {
+  display: flex;
+}
+
+.projects-card-box {
+  width: 33.33%;
+  margin: 35px 10px;
+  padding: 33px;
+  background-color: #22282f;
+  border-radius: 5px;
+  transition: all 0.5s ease 0s;
+}
+
+.projects-card-box:hover {
+  box-shadow: 3px 5px 20px #03506e;
+  transition: all 0.5s ease 0s;
+  transform: translateY(-2px);
+}
+
+.projects-card-box__icons > i {
+  font-size: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  padding: 20px;
+}
+
+.projects-card-box:hover .projects-card-box__icons > i {
+  color: var(--primary);
+  background-color: var(--dark-primary);
+  transition: all 0.5s ease 0s;
+}
+
+.projects-card-box__desc h4 {
+  font-size: 18px;
+  margin: 18px 0 10px 0;
+}
+
+.projects-card-box__desc p {
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.projects-card-box__buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-card-box__buttons button {
+  background-color: #22282f;
+}
+
+.projects-card-box__buttons button > a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* Contact Section */
+section.contact-section {
+  background-color: #22282f;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin: 18px 0;
+}
+
+.contact-section h2 > span {
+  color: var(--primary);
+}
+
+.contact-section form div > input,
+textarea {
+  background-color: #c4c4c4;
+  width: 300px;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-section form div > input:focus,
+textarea:focus {
+  border: 1px solid var(--primary);
+}
+
+.contact-section form div > button {
+  font-size: 14px;
+}
+
+.contact__github {
+  margin-top: 15px;
+}
+
+.contact__github button {
+  padding: 10px 44px;
+  background-color: #171515;
+  font-size: 14px;
+}
+
+.contact__github button > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact__github button > a > i {
+  font-size: 16px;
+}
+
+.contact__github button:hover {
+  background-color: #030303;
 }
 
 /* Footer */
