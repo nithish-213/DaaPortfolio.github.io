@@ -59,12 +59,15 @@ header ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease 0s;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
 }
 
 header ul li a:hover {
-  color: var(--primary);
-  transition: all 0.3s ease 0s;
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
 }
 
 /* Hero Section */
@@ -175,15 +178,15 @@ section.about-section {
   text-decoration: none;
   color: #fff; /* Set the link color to white */
   font-weight: 500;
-  padding: 8px 15px;
-  border: 1px solid #fff; /* Add border to make the button-like appearance */
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
 }
 
 .about-section ul li a:hover {
-  color: var(--dark-primary); /* Dark text color when hovered */
-  background-color: #fff; /* White background when hovered */
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
 }
 
 .about-section ul li i {
@@ -277,4 +280,35 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--primary);
+}
+
+/* Modify GitHub and LinkedIn links to remove button-like styling */
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
+}
+
+header ul li a:hover {
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
+}
+
+.about-section ul li a {
+  text-decoration: none;
+  color: #fff; /* Set the link color to white */
+  font-weight: 500;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
+}
+
+.about-section ul li a:hover {
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
 }
