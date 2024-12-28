@@ -194,77 +194,93 @@ section.about-section {
 }
 
 /* Projects Section */
-section.projects-section {
+.projects-section {
   background-color: var(--dark-primary);
   color: #fff;
   padding: 50px 120px;
 }
 
 .projects-section h2 {
-  margin-top: 30px; /* Consistent spacing */
-  margin-bottom: 15px; /* Consistent spacing */
-  font-size: 28px; /* Same size as Skills heading */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 28px;
   text-align: center;
-  color: var(--primary); /* Match color of Skills heading */
+  color: var(--primary);
 }
 
 .projects-cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .projects-card-box {
-  width: 33.33%;
-  margin: 35px 10px;
-  padding: 33px;
+  width: 100%;
+  max-width: 300px;
+  margin: 15px;
+  padding: 20px;
   background-color: #22282f;
-  border-radius: 5px;
-  transition: all 0.5s ease 0s;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .projects-card-box:hover {
-  box-shadow: 3px 5px 20px #03506e;
-  transition: all 0.5s ease 0s;
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.projects-card-box__icons > i {
-  font-size: 30px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 20px;
-}
-
-.projects-card-box:hover .projects-card-box__icons > i {
+.projects-card-box__icons i {
+  font-size: 40px;
   color: var(--primary);
-  background-color: var(--dark-primary);
-  transition: all 0.5s ease 0s;
+  margin-bottom: 15px;
 }
 
 .projects-card-box__desc h4 {
-  font-size: 18px;
-  margin: 18px 0 10px 0;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .projects-card-box__desc p {
   font-size: 14px;
   color: #c4c4c4;
+  margin-bottom: 20px;
 }
 
 .projects-card-box__buttons {
-  margin-top: 25px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
 
-.projects-card-box__buttons button {
-  background-color: #22282f;
+.projects-card-box__buttons .btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.projects-card-box__buttons button > a {
-  text-decoration: none;
-  font-size: 13px;
+.projects-card-box__buttons .btn-primary {
+  background-color: var(--primary);
+  color: var(--dark-primary);
+}
+
+.projects-card-box__buttons .btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.projects-card-box__buttons .btn-secondary {
+  background-color: #444;
   color: #fff;
+}
+
+.projects-card-box__buttons .btn-secondary:hover {
+  background-color: #555;
+}
+
+.projects-card-box__buttons a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Footer */
