@@ -282,3 +282,44 @@ footer a {
     flex: 1 1 100%;
   }
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode .hero-section {
+    background-color: #333;
+}
+
+body.dark-mode .project-card {
+    background-color: #222;
+    border-color: #444;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+/* Dark Mode Toggle Button */
+button#darkModeToggle {
+    padding: 10px 15px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#darkModeToggle:hover {
+    background-color: #005a9e;
+}
