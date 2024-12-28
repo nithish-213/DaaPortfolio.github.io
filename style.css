@@ -47,20 +47,8 @@ header .logo {
 }
 
 header ul {
-  display: none; /* Hide menu on smaller screens */
-  flex-direction: column;
-  background-color: var(--dark-primary);
-  width: 100%;
-  padding: 10px;
-}
-
-header ul.show {
   display: flex;
-}
-
-header .menu-toggle {
-  display: none;
-  cursor: pointer;
+  list-style: none;
 }
 
 header ul li {
@@ -95,17 +83,6 @@ header ul li a:hover {
 
   header ul li {
     margin: 5px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  header ul {
-    display: none;
-  }
-
-  header .menu-toggle {
-    display: block;
-    color: #fff;
   }
 }
 
