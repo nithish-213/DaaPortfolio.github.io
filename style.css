@@ -202,7 +202,7 @@ section.about-section {
 
 .projects-section h2 {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 28px;
   text-align: center;
   color: var(--primary);
@@ -210,79 +210,88 @@ section.about-section {
 
 .projects-cards {
   display: flex; /* Use flexbox for horizontal layout */
-  justify-content: space-around; /* Add spacing between cards */
+  justify-content: center; 
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
   gap: 20px; /* Add spacing between rows */
 }
 
 .projects-card-box {
-  flex: 1 1 calc(33.33% - 20px); /* Responsive: 3 cards per row, adjust gap */
-  max-width: 300px; /* Limit maximum width */
+  width: 48%; /* Two cards side by side with a gap in between */
+  padding: 20px;
   background-color: #22282f;
   border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .projects-card-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 20px #03506e;
+  transition: all 0.5s ease 0s;
+  transform: translateY(-2px);
 }
 
-.projects-card-box__icons i {
-  font-size: 40px;
+.projects-card-box__icons > i {
+  font-size: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  padding: 20px;
+}
+
+.projects-card-box:hover .projects-card-box__icons > i {
   color: var(--primary);
-  margin-bottom: 15px;
+  background-color: var(--dark-primary);
+  transition: all 0.5s ease 0s;
 }
 
 .projects-card-box__desc h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin: 18px 0 10px 0;
 }
 
 .projects-card-box__desc p {
   font-size: 14px;
   color: #c4c4c4;
-  margin-bottom: 20px;
 }
 
 .projects-card-box__buttons {
+  margin-top: 25px;
   display: flex;
   justify-content: center;
-  gap: 10px; /* Add spacing between buttons */
+  align-items: center;
 }
 
-.projects-card-box__buttons .btn {
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.projects-card-box__buttons button {
+  background-color: #22282f;
 }
 
-.projects-card-box__buttons .btn-primary {
-  background-color: var(--primary);
-  color: var(--dark-primary);
-}
-
-.projects-card-box__buttons .btn-primary:hover {
-  background-color: var(--primary-hover);
-}
-
-.projects-card-box__buttons .btn-secondary {
-  background-color: #444;
+.projects-card-box__buttons button > a {
+  text-decoration: none;
+  font-size: 13px;
   color: #fff;
 }
 
-.projects-card-box__buttons .btn-secondary:hover {
-  background-color: #555;
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* On medium screens (tablets) and below */
+  .projects-card-box {
+    width: 100%; /* Stack cards vertically */
+    margin-bottom: 20px; /* Add space between stacked cards */
+  }
 }
 
-.projects-card-box__buttons a {
-  text-decoration: none;
-  color: inherit;
+@media (max-width: 480px) {
+  /* On small screens (mobile) */
+  .projects-card-box__desc h4 {
+    font-size: 16px;
+  }
+
+  .projects-card-box__desc p {
+    font-size: 12px;
+  }
+
+  .projects-card-box__buttons button > a {
+    font-size: 12px;
+  }
 }
 
 /* Footer */
