@@ -31,17 +31,16 @@ header {
   left: 0;
   right: 0;
   background-color: var(--dark-primary);
-  padding: 25px;
+  padding: 20px 40px;
   color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   z-index: 1;
 }
 
 header .logo {
   color: var(--primary);
-  margin-right: 130px;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -52,22 +51,33 @@ header ul {
 }
 
 header ul li {
-  margin-right: 30px;
+  margin-left: 20px;
 }
 
 header ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
 }
 
 header ul li a:hover {
   color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  header ul li {
+    margin: 5px 0;
+  }
 }
 
 /* Hero Section */
@@ -76,11 +86,20 @@ section.hero-section {
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 100px 120px 50px 200px;
+  justify-content: space-between;
+  padding: 100px 40px;
+  flex-wrap: wrap;
+}
+
+.hero-section__content {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 20px;
 }
 
 .hero-section__title {
   font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .hero-section__title span {
@@ -89,10 +108,12 @@ section.hero-section {
 
 .hero-section__desc {
   color: #c4c4c4;
+  margin-bottom: 20px;
 }
 
 .hero-img img {
-  margin-left: 30px;
+  max-width: 100%;
+  height: auto;
   border-radius: 15px;
 }
 
@@ -105,69 +126,43 @@ section.hero-section {
   color: #fff;
 }
 
-/* buttons */
-.btn {
-  padding: 10px 20px;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
+@media (max-width: 768px) {
+  section.hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.btn.btn-primary {
-  background-color: var(--primary);
-  color: var(--dark-primary);
-  font-weight: 600;
-}
-
-.btn.btn-primary:hover {
-  background-color: var(--primary-hover);
-  transition: all 0.3s ease 0s;
+  .hero-section__content {
+    margin: 0 0 20px 0;
+  }
 }
 
 /* About Section */
 section.about-section {
-  padding: 40px 20px;
-  background-color: var(--dark-primary); /* Unified dark background */
-  color: #fff; /* Text color for better contrast */
+  padding: 50px 20px;
+  background-color: var(--dark-primary);
+  color: #fff;
 }
 
 .about-content {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #22282f; /* Slightly lighter dark background */
+  background-color: #22282f;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--primary); /* Highlighted headings */
-}
-
-.about-section dl {
-  margin-bottom: 40px;
-}
-
-.about-section dt {
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #c4c4c4;
-}
-
-.about-section dd {
+  text-align: center;
   margin-bottom: 20px;
-  padding-left: 10px;
+  font-size: 28px;
+  color: var(--primary);
 }
 
 .about-section ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin-bottom: 30px;
 }
 
 .about-section ul li {
@@ -176,146 +171,74 @@ section.about-section {
 
 .about-section ul li a {
   text-decoration: none;
-  color: #fff; /* Set the link color to white */
+  color: #fff;
   font-weight: 500;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
 }
 
 .about-section ul li a:hover {
-  color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
+  color: var(--primary);
 }
 
-.about-section ul li i {
-  margin-right: 10px;
+@media (max-width: 768px) {
+  .about-content {
+    padding: 15px;
+  }
 }
 
 /* Projects Section */
-.projects-section {
+section.projects-section {
+  padding: 50px 20px;
   background-color: var(--dark-primary);
-  color: #fff;
-  padding: 50px 120px;
 }
 
 .projects-section h2 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 28px;
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
   color: var(--primary);
 }
 
 .projects-cards {
-  display: flex; /* Use flexbox for horizontal layout */
-  justify-content: space-between; 
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: 20px; /* Add spacing between rows */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .projects-card-box {
-  flex: 1 1 calc(50% - 20px); /* Each card takes up 50% of the container width */
+  flex: 1 1 calc(50% - 20px);
   background-color: #22282f;
-  border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   text-align: center;
 }
 
 .projects-card-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.projects-card-box__icons i {
-  font-size: 40px;
+.projects-card-box__icons > i {
+  font-size: 30px;
   color: var(--primary);
   margin-bottom: 15px;
 }
 
-.projects-card-box:hover .projects-card-box__icons > i {
-  color: var(--primary);
-  background-color: var(--dark-primary);
-  transition: all 0.5s ease 0s;
-}
-
 .projects-card-box__desc h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin: 15px 0;
 }
 
 .projects-card-box__desc p {
-  font-size: 14px;
   color: #c4c4c4;
-  margin-bottom: 20px;
+  font-size: 14px;
 }
 
-.projects-card-box__buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects-card-box__buttons .btn {
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-projects-card-box__buttons .btn-primary {
-  background-color: var(--primary);
-  color: var(--dark-primary);
-}
-
-.projects-card-box__buttons .btn-primary:hover {
-  background-color: var(--primary-hover);
-}
-
-.projects-card-box__buttons .btn-secondary {
-  background-color: #444;
-  color: #fff;
-}
-
-.projects-card-box__buttons .btn-secondary:hover {
-  background-color: #555;
-}
-
-.projects-card-box__buttons a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.projects-card-box__buttons button {
-  background-color: #22282f;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-  /* On medium screens (tablets) and below */
   .projects-card-box {
-    width: 100%; /* Stack cards vertically */
-    margin-bottom: 20px; /* Add space between stacked cards */
-  }
-}
-
-@media (max-width: 480px) {
-  /* On small screens (mobile) */
-  .projects-card-box__desc h4 {
-    font-size: 16px;
-  }
-
-  .projects-card-box__desc p {
-    font-size: 12px;
-  }
-
-  .projects-card-box__buttons button > a {
-    font-size: 12px;
+    width: 100%;
   }
 }
 
@@ -324,42 +247,15 @@ footer {
   background-color: var(--dark-primary);
   color: gray;
   text-align: center;
-  padding: 15px 0;
-  font-size: 13px;
+  padding: 20px;
+  font-size: 14px;
 }
 
 footer a {
-  text-decoration: none;
   color: var(--primary);
-}
-
-/* Modify GitHub and LinkedIn links to remove button-like styling */
-header ul li a {
-  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
 }
 
-header ul li a:hover {
-  color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
-}
-
-.about-section ul li a {
-  text-decoration: none;
-  color: #fff; /* Set the link color to white */
-  font-weight: 500;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
-}
-
-.about-section ul li a:hover {
-  color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
+footer a:hover {
+  text-decoration: underline;
 }
