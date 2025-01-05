@@ -47,25 +47,219 @@
     </header>
 
     <main>
-   <!-- Learning Reference -->
-     <section class="about-section" id="about">
+   <!-- DAA Lab Reflections -->
+      <section class="about-section" id="about">
         <div class="about-content">
-        <h2 class="title" >My Learning References</h2>
-          <h3>Challenges:</h3>
-          <h4>1. Challenges in Learning/Understanding the Above Concepts:</h4>
-          <p>
-            Understanding topics like time complexity, binary search trees, and graph algorithms can be challenging because they involve abstract mathematical concepts and practical applications. Visualizing and building intuition for concepts like DFS, BFS, and heaps can be tricky, as they require a solid understanding of recursion and data structures.
-          </p>
-          <h4>2. Challenges in Correlating with Real-World Applications:</h4>
-          <p>
-            Connecting these concepts to real-world problems involves bridging theory with practice. For example, understanding how graph algorithms are used in logistics for route optimization or how pattern searching applies to text analysis in search engines can feel abstract without hands-on projects or real-world case studies to demonstrate their applications.
-          </p>
-          <h4>3. Determining the Most Efficient Approach/Design Techniques for Solving a Complex Problem:</h4>
-          <p>
-            Choosing the best approach involves evaluating trade-offs in time and space complexity, considering the problem's constraints, and often experimenting with different algorithms. This requires analytical skills, a solid understanding of the problem domain, and sometimes iterative refinement to optimize performance.
-          </p>
+          <h2 class="title">DAA Lab Reflections</h2>
+
+          <!-- Key Concepts Learned -->
+          <h3>Key Concepts Learned</h3>
+          <ul>
+            <li>Time Complexity Analysis</li>
+            <li>Binary Search Tree</li>
+            <li>DFS and BFS</li>
+            <li>Heap</li>
+            <li>Sorting</li>
+            <li>Pattern Searching</li>
+            <li>Graph Algorithms</li>
+          </ul>
+
+          <!-- Challenges -->
+          <h3>1. Challenges in Learning/Understanding the Above Concepts</h3>
+          <ul>
+            <li>
+              <b>Time Complexity Analysis:</b> Requires a deep understanding of
+              mathematical notations like Big-O, Theta, and Omega.
+            </li>
+            <li>
+              <b>Binary Search Tree:</b> Difficulty in understanding rotations
+              during insertion and deletion operations.
+            </li>
+            <li>
+              <b>DFS and BFS:</b> Requires grasping recursion for DFS and
+              queue-based implementation for BFS.
+            </li>
+            <li>
+              <b>Heap:</b> Understanding the heapify process and its application
+              in priority queues.
+            </li>
+            <li>
+              <b>Sorting:</b> Choosing between algorithms like QuickSort,
+              MergeSort, or HeapSort for optimal performance.
+            </li>
+            <li>
+              <b>Pattern Searching:</b> Challenges in implementing algorithms
+              like KMP due to preprocessing requirements.
+            </li>
+            <li>
+              <b>Graph Algorithms:</b> Modeling real-world problems and
+              understanding shortest path or MST algorithms.
+            </li>
+          </ul>
+
+          <h3>2. Challenges in Correlating with Real-World Applications</h3>
+          <ul>
+            <li>
+              <b>Time Complexity Analysis:</b> Applying theoretical efficiency
+              to large-scale systems like web servers.
+            </li>
+            <li>
+              <b>Binary Search Tree:</b> Optimizing database search operations
+              using balanced trees like AVL or Red-Black Trees.
+            </li>
+            <li>
+              <b>DFS and BFS:</b> Using these in navigation systems or solving
+              puzzles like mazes.
+            </li>
+            <li>
+              <b>Heap:</b> Applications in job scheduling or real-time priority
+              management.
+            </li>
+            <li>
+              <b>Sorting:</b> Efficiently handling data in e-commerce platforms
+              or search engines.
+            </li>
+            <li>
+              <b>Pattern Searching:</b> Real-world applications in text editors
+              or DNA sequence analysis.
+            </li>
+            <li>
+              <b>Graph Algorithms:</b> Applications in social networks,
+              logistics, and communication networks.
+            </li>
+          </ul>
+          
+          <h3>3. Determining the Most Efficient Approach/Design Techniques</h3>
+          <ul>
+            <li>
+              <b>Time Complexity Analysis:</b> Start with brute force and
+              optimize incrementally by analyzing time complexity.
+            </li>
+            <li>
+              <b>Binary Search Tree:</b> Use AVL or Red-Black Trees for balanced
+              data storage and retrieval.
+              <pre>
+                void insert(Node*& root, int value) {
+                if (root == nullptr) {
+                root = new Node(value);
+                return;
+                }
+                if (value < root->data) {
+                  insert(root->left, value);
+                  }
+                  else {
+                  insert(root->right, value);
+                  }
+                  root = balance(root);
+                  }
+              </pre>
+            </li>
+            <li>
+              <b>DFS and BFS:</b> Choose DFS for pathfinding problems and BFS
+              for shortest path in unweighted graphs.
+              <pre>
+                void BFS(Graph& g, int start) {
+                queue q;
+                vector visited(g.size(), false);
+                q.push(start);
+                visited[start] = true;
+                while (!q.empty()) {
+                int node = q.front();
+                q.pop();
+                cout << node << " ";
+                  for (int neighbor : g[node]) {
+                  if (!visited[neighbor]) {
+                  q.push(neighbor);
+                  visited[neighbor] = true;
+                  }
+                  }
+                  }
+                  }
+                </pre>
+            </li>
+                  <li>
+                    <b>Heap:</b> Use heaps for implementing efficient priority queues.
+                    <pre>
+                      void heapify(vector& heap, int n, int i) {
+                      int largest = i;
+                      int left = 2 * i + 1;
+                      int right = 2 * i + 2;
+                      if (left < n && heap[left] > heap[largest])
+                        largest = left;
+                        if (right < n && heap[right] > heap[largest])
+                          largest = right;
+                          if (largest != i) {
+                          swap(heap[i], heap[largest]);
+                          heapify(heap, n, largest);
+                          }
+                          }
+                        </pre>
+                  </li>
+                          <li>
+                            <b>Sorting:</b> Use MergeSort for stability, QuickSort for in-place sorting, and HeapSort for space efficiency.
+                            <pre>
+                              void quickSort(vector& arr, int low, int high) {
+                              if (low < high) {
+                              int pi = partition(arr, low, high);
+                              quickSort(arr, low, pi - 1);
+                              quickSort(arr, pi + 1, high);
+                              }
+                              }
+                            </pre>
+                          </li>
+                                <li>
+                                  <b>Pattern Searching:</b> Apply KMP or Rabin-Karp for pattern matching in large datasets efficiently.
+                                  <pre>
+                                    void computeLPSArray(string pattern, int M, int* lps) {
+                                    int len = 0;
+                                    lps[0] = 0;
+                                    int i = 1;
+                                    while (i < M) {
+                                    if (pattern[i] == pattern[len]) {
+                                    len++;
+                                    lps[i] = len;
+                                    i++;
+                                    }
+                                    else {
+                                    if (len != 0) {
+                                    len = lps[len - 1];
+                                    }
+                                    else {
+                                    lps[i] = 0;
+                                    i++;
+                                    }
+                                    }
+                                    }
+                                    }
+                                  </pre>
+                                </li>
+                                      <li>
+                                        <b>Graph Algorithms:</b> Use Dijkstra for shortest paths, Prim or Kruskal for MST, and Bellman-Ford for graphs with negative weights.
+                                        <pre>
+                                          void dijkstra(vector>>& graph, int src) {
+                                          priority_queue, vector>, greater>> pq;
+                                          vector dist(graph.size(), INT_MAX);
+                                          pq.push({0, src});
+                                          dist[src] = 0;
+                                          while (!pq.empty()) {
+                                          int u = pq.top().second;
+                                          pq.pop();
+                                          for (auto& neighbor : graph[u]) {
+                                          int v = neighbor.first;
+                                          int weight = neighbor.second;
+                                          if (dist[u] + weight < dist[v]) {
+                                          dist[v] = dist[u] + weight;
+                                          pq.push({dist[v], v});
+                                          }
+                                          }
+                                          }
+                                          }
+                                        </pre>
+                                      </li>
+         </ul>
         </div>
-     </section>
+      </section>
+      </main>
     <!-- Footer -->
     <footer>
       <p>
